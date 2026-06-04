@@ -1,0 +1,10 @@
+subscription_id      = ""                              # az account show --query id -o tsv
+location             = "northeurope"
+image_tag            = "latest"
+pb_admin_email       = "tatu.lahtela@paretosoftware.fi"
+pb_admin_password    = ""
+google_client_id     = "758042729002-a129fqidrt4steabg005cr7ie7asgvc9.apps.googleusercontent.com"
+ghcr_token           = "" # GitHub PAT with read:packages scope
+google_client_secret = ""
+odds_api_key         = ""
+results_source       = "auto"

@@ -1,0 +1,1 @@
+storage_account_name = "" # paste value from: cd bootstrap && terraform output storage_account_name
