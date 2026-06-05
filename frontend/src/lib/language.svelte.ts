@@ -3,7 +3,7 @@ import { browser } from '$app/environment';
 export type LanguageCode = 'nb' | 'nn' | 'en';
 
 const STORAGE_KEY = 'language';
-const DEFAULT_LANGUAGE: LanguageCode = 'nb';
+const DEFAULT_LANGUAGE: LanguageCode = 'en';
 const LANGUAGE_ORDER: LanguageCode[] = ['nb', 'nn', 'en'];
 
 export function isLanguageCode(value: unknown): value is LanguageCode {
