@@ -1,5 +1,5 @@
 subscription_id      = ""                              # az account show --query id -o tsv
-location             = "northeurope"
+location             = "swedencentral"
 image_tag            = "latest"
 pb_admin_email       = "tatu.lahtela@paretosoftware.fi"
 pb_admin_password    = ""

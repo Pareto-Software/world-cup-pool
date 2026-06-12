@@ -1,5 +1,5 @@
 output "app_url" {
-  value       = "https://${azurerm_linux_web_app.main.default_hostname}"
+  value       = "https://${azurerm_app_service_custom_hostname_binding.main.hostname}"
   description = "Public URL of the deployed app — set this as PUBLIC_APP_URL"
 }
 

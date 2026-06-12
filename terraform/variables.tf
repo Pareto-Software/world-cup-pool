@@ -5,7 +5,7 @@ variable "subscription_id" {
 
 variable "location" {
   type        = string
-  default     = "northeurope"
+  default     = "swedencentral"
   description = "Azure region for all resources"
 }
 

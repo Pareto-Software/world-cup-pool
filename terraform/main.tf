@@ -81,4 +81,22 @@ resource "azurerm_linux_web_app" "main" {
   }
 }
 
+# ── Custom domain + managed TLS ──────────────────────────────────────────────
+
+resource "azurerm_app_service_custom_hostname_binding" "main" {
+  hostname            = "fudis.paretosoftware.fi"
+  app_service_name    = azurerm_linux_web_app.main.name
+  resource_group_name = azurerm_resource_group.main.name
+}
+
+resource "azurerm_app_service_managed_certificate" "main" {
+  custom_hostname_binding_id = azurerm_app_service_custom_hostname_binding.main.id
+}
+
+resource "azurerm_app_service_certificate_binding" "main" {
+  hostname_binding_id = azurerm_app_service_custom_hostname_binding.main.id
+  certificate_id      = azurerm_app_service_managed_certificate.main.id
+  ssl_state           = "SniEnabled"
+}
+
 # Service principal for GitHub Actions is created manually — see outputs.tf for the command.
