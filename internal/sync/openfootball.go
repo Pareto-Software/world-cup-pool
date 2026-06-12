@@ -17,7 +17,7 @@ import (
 // Matches map 1:1 to our rows by the shared deterministic ExtID (no team
 // name aliasing), and its `score.et` is already the cumulative after-120
 // score — exactly our model.
-const ofLiveURL = "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
+const ofLiveURL = "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 
 type ofScore struct {
 	FT []int `json:"ft"`
